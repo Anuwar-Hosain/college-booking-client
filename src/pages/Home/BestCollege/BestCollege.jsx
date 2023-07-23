@@ -12,10 +12,14 @@ const BestCollege = () => {
   }, []);
   return (
     <section className="size">
-      <div className="my-9">
-        <h1 className="text-4xl font-bold uppercase text-center">
-          Best college
-        </h1>
+      <div className="my-[100px]">
+        <div className="mb-10">
+          <h1 className="text-center Roboto font-bold text-4xl uppercase">
+            <samp className=" Roboto">best</samp>{" "}
+            <samp className="text-[#ffb606] Roboto">colleges</samp>
+          </h1>
+        </div>
+
         <div className="grid grid-cols-3 gap-3">
           {college?.map((singleCollege, index) => (
             <CollegeCard

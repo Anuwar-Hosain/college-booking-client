@@ -1,0 +1,11 @@
+.inner {
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.img-about {
+  transition: all 1.5s ease;
+}
+.img-about:hover {
+  transform: scale(1.5);
+}

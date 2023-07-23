@@ -26,25 +26,40 @@ const CollegeCard = ({ singleCollege }) => {
         <h1 className="Roboto text-[20px] font-semibold my-3">
           {college_name}
         </h1>
-        <div>
+        <div className="mb-5">
           <p className="text-xl font-bold">Events:</p>
-          <div className="flex justify-between border">
+          <div className="grid grid-cols-3 border">
             {events.map((event, i) => (
               <>
                 <p className="border-l-[1px] p-2" key={i}>
+                  <samp className="font-semibold Roboto"> {i + 1}.</samp>{" "}
                   {event.event_name}
                 </p>
               </>
             ))}
           </div>
         </div>
-        <div>
+        <div className="mb-5">
           <p className="text-xl font-bold">Research History:</p>
-          <div className="flex justify-between border">
-            {research_history.map((event, i) => (
+          <div className="">
+            {research_history.map((research, i) => (
               <>
-                <p className="border-l-[1px] p-2" key={i}>
-                  {i + 1} {event.title}
+                <p className="border p-2" key={i}>
+                  <samp className="font-semibold Roboto"> {i + 1}.</samp>{" "}
+                  {research.title}. ({research.year})
+                </p>
+              </>
+            ))}
+          </div>
+        </div>
+        <div className="mb-5">
+          <p className="text-xl font-bold">Sports:</p>
+          <div className="">
+            {sports.map((sport, i) => (
+              <>
+                <p className="border p-2" key={i}>
+                  <samp className="font-semibold Roboto"> {i + 1}.</samp>{" "}
+                  {sport.team_name}. ({sport.sport})
                 </p>
               </>
             ))}
