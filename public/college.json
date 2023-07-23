@@ -1,0 +1,302 @@
+[
+  {
+    "college_name": "ABC College",
+    "location": "City XYZ",
+    "established_year": 1990,
+    "image": "url",
+    "admission_dates": "12-08-2023",
+    "events": [
+      {
+        "event_name": "Annual Sports Meet",
+        "date": "2023-07-15",
+        "location": "College Sports Ground",
+        "description": "Join us for an exciting day of sports competitions and activities. All students and staff are invited to participate.",
+        "organizer": "College Sports Committee",
+        "contact_person": "John Smith",
+        "contact_email": "john.smith@abccollege.edu"
+      },
+      {
+        "event_name": "Career Fair",
+        "date": "2023-09-20",
+        "location": "College Auditorium",
+        "description": "Explore job opportunities and internships. Various companies will be present to interact with students.",
+        "organizer": "Career Services Department",
+        "contact_person": "Jane Doe",
+        "contact_email": "jane.doe@abccollege.edu"
+      },
+      {
+        "event_name": "Cultural Fest",
+        "date": "2023-11-05",
+        "location": "College Grounds",
+        "description": "Experience the rich cultural diversity of our college community. Enjoy performances, food, and games from different cultures.",
+        "organizer": "Cultural Committee",
+        "contact_person": "Emily Johnson",
+        "contact_email": "emily.johnson@abccollege.edu"
+      }
+    ],
+    "research_history": [
+      {
+        "year": 2020,
+        "title": "Advancements in Artificial Intelligence",
+        "authors": ["John Smith", "Jane Doe", "Michael Johnson"],
+        "publication": "Journal of Computer Science",
+        "doi": "10.1234/jcs.2020.12345",
+        "summary": "This research paper explores the recent advancements in artificial intelligence and its potential applications in various industries.",
+        "citations": 56
+      },
+      {
+        "year": 2019,
+        "title": "Climate Change Impact on Local Ecosystems",
+        "authors": ["Emily Brown", "Robert Williams", "Sophia Lee"],
+        "publication": "Environmental Studies Review",
+        "doi": "10.5678/esr.2019.67890",
+        "summary": "This study analyzes the effects of climate change on local ecosystems, focusing on biodiversity and habitat changes.",
+        "citations": 72
+      },
+      {
+        "year": 2018,
+        "title": "Entrepreneurship and Economic Growth",
+        "authors": ["David Anderson", "Olivia Wilson", "William Davis"],
+        "publication": "Journal of Economics and Business",
+        "doi": "10.7890/jeb.2018.54321",
+        "summary": "This research investigates the relationship between entrepreneurship and economic growth in developing countries.",
+        "citations": 32
+      }
+    ],
+    "sports": [
+      {
+        "team_name": "ABC Eagles",
+        "sport": "Football",
+        "coach": "John Smith",
+        "home_ground": "College Stadium",
+        "players": ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+      },
+      {
+        "team_name": "ABC Tigers",
+        "sport": "Basketball",
+        "coach": "Sarah Johnson",
+        "home_ground": "College Gymnasium",
+        "players": ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+      },
+      {
+        "team_name": "ABC Sharks",
+        "sport": "Swimming",
+        "coach": "Michael Brown",
+        "home_ground": "College Aquatics Center",
+        "players": ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+      }
+    ],
+    "programs_offered": [
+      "Computer Science",
+      "Electrical Engineering",
+      "Business Administration"
+    ],
+    "facilities": ["Library", "Laboratories", "Sports Complex", "Cafeteria"],
+    "contact_info": {
+      "address": "123 College Street, City XYZ",
+      "phone": "+1 (123) 456-7890",
+      "email": "info@abccollege.edu"
+    },
+    "website": "https://www.abccollege.edu"
+  },
+  {
+    "college_name": "ABC College",
+    "location": "City XYZ",
+    "established_year": 1990,
+    "image": "url",
+    "admission_dates": "12-08-2023",
+    "events": [
+      {
+        "event_name": "Annual Sports Meet",
+        "date": "2023-07-15",
+        "location": "College Sports Ground",
+        "description": "Join us for an exciting day of sports competitions and activities. All students and staff are invited to participate.",
+        "organizer": "College Sports Committee",
+        "contact_person": "John Smith",
+        "contact_email": "john.smith@abccollege.edu"
+      },
+      {
+        "event_name": "Career Fair",
+        "date": "2023-09-20",
+        "location": "College Auditorium",
+        "description": "Explore job opportunities and internships. Various companies will be present to interact with students.",
+        "organizer": "Career Services Department",
+        "contact_person": "Jane Doe",
+        "contact_email": "jane.doe@abccollege.edu"
+      },
+      {
+        "event_name": "Cultural Fest",
+        "date": "2023-11-05",
+        "location": "College Grounds",
+        "description": "Experience the rich cultural diversity of our college community. Enjoy performances, food, and games from different cultures.",
+        "organizer": "Cultural Committee",
+        "contact_person": "Emily Johnson",
+        "contact_email": "emily.johnson@abccollege.edu"
+      }
+    ],
+    "research_history": [
+      {
+        "year": 2020,
+        "title": "Advancements in Artificial Intelligence",
+        "authors": ["John Smith", "Jane Doe", "Michael Johnson"],
+        "publication": "Journal of Computer Science",
+        "doi": "10.1234/jcs.2020.12345",
+        "summary": "This research paper explores the recent advancements in artificial intelligence and its potential applications in various industries.",
+        "citations": 56
+      },
+      {
+        "year": 2019,
+        "title": "Climate Change Impact on Local Ecosystems",
+        "authors": ["Emily Brown", "Robert Williams", "Sophia Lee"],
+        "publication": "Environmental Studies Review",
+        "doi": "10.5678/esr.2019.67890",
+        "summary": "This study analyzes the effects of climate change on local ecosystems, focusing on biodiversity and habitat changes.",
+        "citations": 72
+      },
+      {
+        "year": 2018,
+        "title": "Entrepreneurship and Economic Growth",
+        "authors": ["David Anderson", "Olivia Wilson", "William Davis"],
+        "publication": "Journal of Economics and Business",
+        "doi": "10.7890/jeb.2018.54321",
+        "summary": "This research investigates the relationship between entrepreneurship and economic growth in developing countries.",
+        "citations": 32
+      }
+    ],
+    "sports": [
+      {
+        "team_name": "ABC Eagles",
+        "sport": "Football",
+        "coach": "John Smith",
+        "home_ground": "College Stadium",
+        "players": ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+      },
+      {
+        "team_name": "ABC Tigers",
+        "sport": "Basketball",
+        "coach": "Sarah Johnson",
+        "home_ground": "College Gymnasium",
+        "players": ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+      },
+      {
+        "team_name": "ABC Sharks",
+        "sport": "Swimming",
+        "coach": "Michael Brown",
+        "home_ground": "College Aquatics Center",
+        "players": ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+      }
+    ],
+    "programs_offered": [
+      "Computer Science",
+      "Electrical Engineering",
+      "Business Administration"
+    ],
+    "facilities": ["Library", "Laboratories", "Sports Complex", "Cafeteria"],
+    "contact_info": {
+      "address": "123 College Street, City XYZ",
+      "phone": "+1 (123) 456-7890",
+      "email": "info@abccollege.edu"
+    },
+    "website": "https://www.abccollege.edu"
+  },
+  {
+    "college_name": "ABC College",
+    "location": "City XYZ",
+    "established_year": 1990,
+    "image": "url",
+    "admission_dates": "12-08-2023",
+    "events": [
+      {
+        "event_name": "Annual Sports Meet",
+        "date": "2023-07-15",
+        "location": "College Sports Ground",
+        "description": "Join us for an exciting day of sports competitions and activities. All students and staff are invited to participate.",
+        "organizer": "College Sports Committee",
+        "contact_person": "John Smith",
+        "contact_email": "john.smith@abccollege.edu"
+      },
+      {
+        "event_name": "Career Fair",
+        "date": "2023-09-20",
+        "location": "College Auditorium",
+        "description": "Explore job opportunities and internships. Various companies will be present to interact with students.",
+        "organizer": "Career Services Department",
+        "contact_person": "Jane Doe",
+        "contact_email": "jane.doe@abccollege.edu"
+      },
+      {
+        "event_name": "Cultural Fest",
+        "date": "2023-11-05",
+        "location": "College Grounds",
+        "description": "Experience the rich cultural diversity of our college community. Enjoy performances, food, and games from different cultures.",
+        "organizer": "Cultural Committee",
+        "contact_person": "Emily Johnson",
+        "contact_email": "emily.johnson@abccollege.edu"
+      }
+    ],
+    "research_history": [
+      {
+        "year": 2020,
+        "title": "Advancements in Artificial Intelligence",
+        "authors": ["John Smith", "Jane Doe", "Michael Johnson"],
+        "publication": "Journal of Computer Science",
+        "doi": "10.1234/jcs.2020.12345",
+        "summary": "This research paper explores the recent advancements in artificial intelligence and its potential applications in various industries.",
+        "citations": 56
+      },
+      {
+        "year": 2019,
+        "title": "Climate Change Impact on Local Ecosystems",
+        "authors": ["Emily Brown", "Robert Williams", "Sophia Lee"],
+        "publication": "Environmental Studies Review",
+        "doi": "10.5678/esr.2019.67890",
+        "summary": "This study analyzes the effects of climate change on local ecosystems, focusing on biodiversity and habitat changes.",
+        "citations": 72
+      },
+      {
+        "year": 2018,
+        "title": "Entrepreneurship and Economic Growth",
+        "authors": ["David Anderson", "Olivia Wilson", "William Davis"],
+        "publication": "Journal of Economics and Business",
+        "doi": "10.7890/jeb.2018.54321",
+        "summary": "This research investigates the relationship between entrepreneurship and economic growth in developing countries.",
+        "citations": 32
+      }
+    ],
+    "sports": [
+      {
+        "team_name": "ABC Eagles",
+        "sport": "Football",
+        "coach": "John Smith",
+        "home_ground": "College Stadium",
+        "players": ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+      },
+      {
+        "team_name": "ABC Tigers",
+        "sport": "Basketball",
+        "coach": "Sarah Johnson",
+        "home_ground": "College Gymnasium",
+        "players": ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+      },
+      {
+        "team_name": "ABC Sharks",
+        "sport": "Swimming",
+        "coach": "Michael Brown",
+        "home_ground": "College Aquatics Center",
+        "players": ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"]
+      }
+    ],
+    "programs_offered": [
+      "Computer Science",
+      "Electrical Engineering",
+      "Business Administration"
+    ],
+    "facilities": ["Library", "Laboratories", "Sports Complex", "Cafeteria"],
+    "contact_info": {
+      "address": "123 College Street, City XYZ",
+      "phone": "+1 (123) 456-7890",
+      "email": "info@abccollege.edu"
+    },
+    "website": "https://www.abccollege.edu"
+  }
+]

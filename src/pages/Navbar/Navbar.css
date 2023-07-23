@@ -1,0 +1,25 @@
+.active {
+  background-color: #ffb606 !important;
+  color: #ffffff !important;
+  font-size: 17px;
+}
+.hover:hover {
+  background-color: #ffb606 !important;
+  color: #ffffff !important;
+  font-size: 17px;
+}
+.list {
+  margin-left: 10px;
+  font-size: 17px;
+}
+.navBar {
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+.login-btn {
+  border: 1px solid #ffb606;
+  background: transparent;
+  font-size: 17px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}

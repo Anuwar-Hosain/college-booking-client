@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.size {
+  width: 85vw;
+  margin: 0 auto;
+}
+.size2 {
+  width: 95vw;
+  margin: 0 auto;
+}
+.Roboto {
+  font-family: "Roboto", sans-serif;
+}
+.RobotoSlab {
+  font-family: "Roboto Slab", serif;
+}
+
+.color {
+  /* color: #e21836; */
+  color: #ffb606;
+}
+.color1 {
+  color: #00437c;
+}
+.color2 {
+  color: #e8e9eb;
+}
