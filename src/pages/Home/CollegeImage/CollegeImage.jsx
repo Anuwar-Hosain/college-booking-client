@@ -9,40 +9,46 @@ import img7 from "../../../assets/abouts/7.jpg";
 import img8 from "../../../assets/abouts/8.jpg";
 const CollegeImage = () => {
   return (
-    <section className="size">
-      <div className="mb-10">
-        <h1 className="text-center Roboto font-bold text-4xl uppercase">
-          <samp className="Roboto">our</samp>{" "}
-          <samp className="text-[#ffb606] Roboto">gallery</samp>
-        </h1>
+    <>
+      <div className="bg-[#E6E6E4] py-6">
+        <div className="size ">
+          <div>
+            <div className="mb-10">
+              <h1 className="text-center Roboto font-bold text-4xl uppercase">
+                <samp className="Roboto">our</samp>{" "}
+                <samp className="text-[#ffb606] Roboto">gallery</samp>
+              </h1>
+            </div>
+            <div className="grid grid-cols-4 lg:gap-5 gap-2">
+              <div className="inner">
+                <img src={img1} alt="image" className="rounded-md img-about" />
+              </div>
+              <div className="inner">
+                <img src={img2} alt="image" className="rounded-md img-about" />
+              </div>
+              <div className="inner">
+                <img src={img3} alt="image" className="rounded-md img-about" />
+              </div>
+              <div className="inner">
+                <img src={img4} alt="image" className="rounded-md img-about" />
+              </div>
+              <div className="inner">
+                <img src={img5} alt="image" className="rounded-md img-about" />
+              </div>
+              <div className="inner">
+                <img src={img6} alt="image" className="rounded-md img-about" />
+              </div>
+              <div className="inner">
+                <img src={img7} alt="image" className="rounded-md img-about" />
+              </div>
+              <div className="inner">
+                <img src={img8} alt="image" className="rounded-md img-about" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="grid grid-cols-4 lg:gap-5 gap-2">
-        <div className="inner">
-          <img src={img1} alt="image" className="rounded-md img-about" />
-        </div>
-        <div className="inner">
-          <img src={img2} alt="image" className="rounded-md img-about" />
-        </div>
-        <div className="inner">
-          <img src={img3} alt="image" className="rounded-md img-about" />
-        </div>
-        <div className="inner">
-          <img src={img4} alt="image" className="rounded-md img-about" />
-        </div>
-        <div className="inner">
-          <img src={img5} alt="image" className="rounded-md img-about" />
-        </div>
-        <div className="inner">
-          <img src={img6} alt="image" className="rounded-md img-about" />
-        </div>
-        <div className="inner">
-          <img src={img7} alt="image" className="rounded-md img-about" />
-        </div>
-        <div className="inner">
-          <img src={img8} alt="image" className="rounded-md img-about" />
-        </div>
-      </div>
-    </section>
+    </>
   );
 };
 

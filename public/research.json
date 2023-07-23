@@ -1,0 +1,38 @@
+[
+  {
+    "year": 2020,
+    "title": "Advancements in Artificial Intelligence",
+    "authors": ["John Smith", "Jane Doe", "Michael Johnson"],
+    "publication": "Journal of Computer Science",
+    "doi": "10.1234/jcs.2020.12345",
+    "summary": "This research paper explores the recent advancements in artificial intelligence and its potential applications in various industries.",
+    "citations": 56
+  },
+  {
+    "year": 2019,
+    "title": "Climate Change Impact on Local Ecosystems",
+    "authors": ["Emily Brown", "Robert Williams", "Sophia Lee"],
+    "publication": "Environmental Studies Review",
+    "doi": "10.5678/esr.2019.67890",
+    "summary": "This study analyzes the effects of climate change on local ecosystems, focusing on biodiversity and habitat changes.",
+    "citations": 72
+  },
+  {
+    "year": 2018,
+    "title": "Entrepreneurship and Economic Growth",
+    "authors": ["David Anderson", "Olivia Wilson", "William Davis"],
+    "publication": "Journal of Economics and Business",
+    "doi": "10.7890/jeb.2018.54321",
+    "summary": "This research investigates the relationship between entrepreneurship and economic growth in developing countries.",
+    "citations": 32
+  },
+  {
+    "year": 2019,
+    "title": "Climate Change Impact on Local Ecosystems",
+    "authors": ["Emily Brown", "Robert Williams", "Sophia Lee"],
+    "publication": "Environmental Studies Review",
+    "doi": "10.5678/esr.2019.67890",
+    "summary": "This study analyzes the effects of climate change on local ecosystems, focusing on biodiversity and habitat changes.",
+    "citations": 72
+  }
+]
