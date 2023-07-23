@@ -16,7 +16,7 @@ const BestCollege = () => {
         <h1 className="text-4xl font-bold uppercase text-center">
           Best college
         </h1>
-        <div>
+        <div className="grid grid-cols-3 gap-3">
           {college?.map((singleCollege, index) => (
             <CollegeCard
               key={index}

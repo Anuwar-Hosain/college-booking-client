@@ -3,7 +3,7 @@
     "college_name": "ABC College",
     "location": "City XYZ",
     "established_year": 1990,
-    "image": "url",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Corpus_Christi_College_New_Court%2C_Cambridge%2C_UK_-_Diliff.jpg",
     "admission_dates": "12-08-2023",
     "events": [
       {
@@ -103,7 +103,7 @@
     "college_name": "ABC College",
     "location": "City XYZ",
     "established_year": 1990,
-    "image": "url",
+    "image": "https://gargicollege.in/wp-content/uploads/2018/12/GC-1.jpg",
     "admission_dates": "12-08-2023",
     "events": [
       {
@@ -203,7 +203,7 @@
     "college_name": "ABC College",
     "location": "City XYZ",
     "established_year": 1990,
-    "image": "url",
+    "image": "https://www.berry.edu/about/_images/G3332-About.jpg",
     "admission_dates": "12-08-2023",
     "events": [
       {
