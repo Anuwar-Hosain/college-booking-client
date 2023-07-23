@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
+  const { logOut } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [errorPass, setErrorPass] = useState("");
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
   const {
     register,
@@ -18,44 +22,32 @@ const SignUp = () => {
       setErrorPass("password not same");
       return;
     }
-    // createUser(data.email, data.password)
-    //   .then((result) => {
-    //     const loggedUser = result.user;
-    //     console.log(loggedUser);
-    //     updateUserProfile(data.name, data.photo)
-    //       .then(() => {
-    //         const saveUser = { name: data.name, email: data.email };
-    //         fetch("https://anu-design-server.vercel.app/users", {
-    //           method: "POST",
-    //           headers: {
-    //             "content-type": "application/json",
-    //           },
-    //           body: JSON.stringify(saveUser),
-    //         })
-    //           .then((res) => res.json())
-    //           .then((data) => {
-    //             if (data.insertedId) {
-    //               reset();
-    //               Swal.fire({
-    //                 position: "top-end",
-    //                 icon: "success",
-    //                 title: "User created successfully.",
-    //                 showConfirmButton: false,
-    //                 timer: 1500,
-    //               });
-    //               navigate("/");
-    //             }
-    //           });
-    //       })
-    //       .catch((error) => {
-    //         console.log(error);
-    //         setError(error.message);
-    //       });
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //     setError(error.message);
-    //   });
+    createUser(data.email, data.password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        updateUserProfile(data.name, data.photo)
+          .then(() => {
+            reset();
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "User created successfully.",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            logOut();
+            navigate("/login");
+          })
+          .catch((error) => {
+            console.log(error);
+            setError(error.message);
+          });
+      })
+      .catch((error) => {
+        console.log(error);
+        setError(error.message);
+      });
   };
   return (
     <>

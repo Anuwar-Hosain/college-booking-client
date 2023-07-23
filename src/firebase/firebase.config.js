@@ -5,17 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCx4GerWCsXVOvJBpEhbO65sciwrNjakKQ",
-  authDomain: "anubooking-college.firebaseapp.com",
-  projectId: "anubooking-college",
-  storageBucket: "anubooking-college.appspot.com",
-  messagingSenderId: "395120406064",
-  appId: "1:395120406064:web:57e57b6960ef430a93c7f5",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export default app;
-
-// anuBooking-college
-// BqZE0wJ94MzuTmwf

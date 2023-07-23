@@ -1,8 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 // import logo from "../../assets/logo/logo.png";
 import "./Navbar.css";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const singOut = () => {
+    logOut();
+  };
   const navOptions = (
     <>
       <li className="list">
@@ -38,9 +45,15 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-      <Link to="/login">
-        <button className="login-btn uppercase hover">Login</button>
-      </Link>
+      {user ? (
+        <button onClick={singOut} className="login-btn uppercase hover">
+          Logout
+        </button>
+      ) : (
+        <Link to="/login">
+          <button className="login-btn uppercase hover">Login</button>
+        </Link>
+      )}
     </>
   );
   return (
