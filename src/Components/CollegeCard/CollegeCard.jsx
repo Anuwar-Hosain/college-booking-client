@@ -9,6 +9,7 @@ const CollegeCard = ({ singleCollege }) => {
     research_history,
     sports,
     admission_dates,
+    _id,
   } = singleCollege;
   return (
     <div className="cardBody">
@@ -66,7 +67,7 @@ const CollegeCard = ({ singleCollege }) => {
           </div>
         </div>
       </div>
-      <Link to="/">
+      <Link to={`/college/${_id}`}>
         <button className="btn w-full bg-[#ffb606] hover:bg-[#ffb606] Roboto text-[16px] text-white">
           See More
         </button>

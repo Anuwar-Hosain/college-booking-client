@@ -45,7 +45,7 @@ const MyCollege = () => {
 
   return (
     <section className="size">
-      <div className="my-[100px]">
+      <div className="my-[100px] mb-[300px]">
         <div className="mb-10">
           <h1 className="text-center Roboto font-bold text-4xl uppercase">
             <samp className=" Roboto">Apply</samp>{" "}

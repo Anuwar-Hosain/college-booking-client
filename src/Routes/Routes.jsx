@@ -7,6 +7,9 @@ import SignUp from "../pages/SignUp/SignUp";
 import Admission from "../pages/Admission/Admission";
 import ApplyForm from "../Components/ApplyForm/ApplyForm";
 import MyCollege from "../pages/MyCollege/MyCollege";
+import PrivateRoute from "../pages/PrivateRoute/PrivateRoute";
+import CollegeDetails from "../Components/CollegeDetails/CollegeDetails";
+import UserInfo from "../pages/UserInfo/UserInfo";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +44,29 @@ const router = createBrowserRouter([
       },
       {
         path: "my-college",
-        element: <MyCollege></MyCollege>,
+        element: (
+          <PrivateRoute>
+            <MyCollege></MyCollege>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "college/:id",
+        element: (
+          <PrivateRoute>
+            <CollegeDetails></CollegeDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/college/${params.id}`),
+      },
+      {
+        path: "user-info",
+        element: (
+          <PrivateRoute>
+            <UserInfo></UserInfo>
+          </PrivateRoute>
+        ),
       },
     ],
   },

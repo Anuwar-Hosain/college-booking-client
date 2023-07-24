@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 // import logo from "../../assets/logo/logo.png";
 import "./Navbar.css";
 import { useContext } from "react";
@@ -6,9 +6,11 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const singOut = () => {
     logOut();
+    navigate("/login");
   };
   const navOptions = (
     <>
@@ -36,14 +38,16 @@ const Navbar = () => {
           Admission
         </NavLink>
       </li>
-      <li className="list">
-        <NavLink
-          className={({ isActive }) => (isActive ? "active" : "hover")}
-          to="/my-college"
-        >
-          My College
-        </NavLink>
-      </li>
+      {user && (
+        <li className="list">
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "hover")}
+            to="/my-college"
+          >
+            My College
+          </NavLink>
+        </li>
+      )}
 
       {user ? (
         <>
@@ -58,7 +62,7 @@ const Navbar = () => {
               className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>{user.displayName}</a>
+                <Link to="/user-info">{user.displayName}</Link>
               </li>
               <li>
                 <a onClick={singOut}>Logout</a>

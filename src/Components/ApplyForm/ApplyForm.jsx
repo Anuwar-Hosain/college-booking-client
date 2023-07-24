@@ -82,6 +82,7 @@ const ApplyForm = () => {
               type="text"
               {...register("name", { required: true })}
               placeholder="Enter your name..."
+              value={user.displayName}
               required
               className="input input-bordered w-full"
             />

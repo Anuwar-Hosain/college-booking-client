@@ -3,9 +3,10 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import { BsGoogle } from "react-icons/bs";
 
 const SignUp = () => {
-  const { logOut } = useContext(AuthContext);
+  const { logOut, googleSignIn } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [errorPass, setErrorPass] = useState("");
   const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -28,16 +29,35 @@ const SignUp = () => {
         console.log(loggedUser);
         updateUserProfile(data.name, data.photo)
           .then(() => {
+            const saveUser = {
+              name: data.name,
+              email: data.email,
+              university: "",
+              address: "",
+            };
+            fetch("http://localhost:5000/users", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(saveUser),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.insertedId) {
+                  reset();
+                  Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "User created successfully.",
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+                  logOut();
+                  navigate("/login");
+                }
+              });
             reset();
-            Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: "User created successfully.",
-              showConfirmButton: false,
-              timer: 1500,
-            });
-            logOut();
-            navigate("/login");
           })
           .catch((error) => {
             console.log(error);
@@ -47,6 +67,16 @@ const SignUp = () => {
       .catch((error) => {
         console.log(error);
         setError(error.message);
+      });
+  };
+  const handleGoogleSingIn = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
   return (
@@ -152,6 +182,16 @@ const SignUp = () => {
             </Link>
           </small>
         </p>
+        <div className="divider">Or, login with</div>
+        <div className="flex justify-center">
+          <div
+            onClick={handleGoogleSingIn}
+            className="bg-[#F4B400] p-2 flex items-center gap-2 rounded text-white text-center cursor-pointer"
+          >
+            <BsGoogle className="text-[#4285F4]"></BsGoogle>
+            <p className="text-[#DB4437]">Google</p>
+          </div>
+        </div>
       </div>
     </>
   );
