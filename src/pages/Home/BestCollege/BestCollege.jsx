@@ -4,10 +4,10 @@ import CollegeCard from "../../../Components/CollegeCard/CollegeCard";
 const BestCollege = () => {
   const [college, setCollege] = useState();
   useEffect(() => {
-    fetch("college.json")
+    fetch("http://localhost:5000/colleges")
       .then((res) => res.json())
       .then((data) => {
-        setCollege(data);
+        setCollege(data.slice(0, 3));
       });
   }, []);
   return (

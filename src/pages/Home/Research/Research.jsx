@@ -6,10 +6,10 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 const Research = () => {
   const [research, setResearch] = useState();
   useEffect(() => {
-    fetch("research.json")
+    fetch("http://localhost:5000/research")
       .then((res) => res.json())
       .then((data) => {
-        setResearch(data);
+        setResearch(data.slice(0, 4));
       });
   }, []);
   return (
