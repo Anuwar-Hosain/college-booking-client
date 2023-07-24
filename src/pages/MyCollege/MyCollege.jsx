@@ -6,7 +6,7 @@ const MyCollege = () => {
   const { user } = useContext(AuthContext);
   const [myCollege, setMyCollege] = useState();
   useEffect(() => {
-    fetch(`http://localhost:5000/apply-college/${user?.email}`)
+    fetch(`https://anu-booking-server.vercel.app/apply-college/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyCollege(data);
@@ -21,7 +21,7 @@ const MyCollege = () => {
     const description = form.description.value;
     const review = { ratting, description, name: user.displayName };
     console.log(review);
-    fetch("http://localhost:5000/review", {
+    fetch("https://anu-booking-server.vercel.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

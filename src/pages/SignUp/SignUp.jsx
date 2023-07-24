@@ -36,7 +36,7 @@ const SignUp = () => {
               university: "",
               address: "",
             };
-            fetch("http://localhost:5000/users", {
+            fetch("https://anu-booking-server.vercel.app/users", {
               method: "POST",
               headers: {
                 "content-type": "application/json",
@@ -79,7 +79,7 @@ const SignUp = () => {
 
         const saveUser = { name, email, image, university: "", address: "" };
         console.log(saveUser);
-        fetch("http://localhost:5000/users", {
+        fetch("https://anu-booking-server.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

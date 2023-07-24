@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         path: "admission/:id",
         element: <ApplyForm></ApplyForm>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/college/${params.id}`),
+          fetch(`https://anu-booking-server.vercel.app/college/${params.id}`),
       },
       {
         path: "my-college",
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/college/${params.id}`),
+          fetch(`https://anu-booking-server.vercel.app/college/${params.id}`),
       },
       {
         path: "user-info",

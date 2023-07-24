@@ -40,7 +40,7 @@ const ApplyForm = () => {
           data.college = college.college_name;
           data.college_id = college._id;
           console.log(data);
-          fetch("http://localhost:5000/applyForm", {
+          fetch("https://anu-booking-server.vercel.app/applyForm", {
             method: "POST",
             headers: {
               "content-type": "application/json",

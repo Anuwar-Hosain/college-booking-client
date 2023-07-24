@@ -4,7 +4,7 @@ import CollegeCard from "../../../Components/CollegeCard/CollegeCard";
 const BestCollege = () => {
   const [college, setCollege] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/colleges")
+    fetch("https://anu-booking-server.vercel.app/colleges")
       .then((res) => res.json())
       .then((data) => {
         setCollege(data.slice(0, 3));
@@ -20,7 +20,7 @@ const BestCollege = () => {
           </h1>
         </div>
 
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
           {college?.map((singleCollege, index) => (
             <CollegeCard
               key={index}

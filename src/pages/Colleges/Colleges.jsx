@@ -5,14 +5,14 @@ const Colleges = () => {
   const [college, setCollege] = useState();
   const [searchText, setSearchText] = useState("");
   useEffect(() => {
-    fetch("http://localhost:5000/colleges")
+    fetch("https://anu-booking-server.vercel.app/colleges")
       .then((res) => res.json())
       .then((data) => {
         setCollege(data);
       });
   }, []);
   const handleSearch = () => {
-    fetch(`http://localhost:5000/collegeSearch/${searchText}`)
+    fetch(`https://anu-booking-server.vercel.app/collegeSearch/${searchText}`)
       .then((res) => res.json())
       .then((data) => {
         setCollege(data);

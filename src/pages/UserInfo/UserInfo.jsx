@@ -8,7 +8,7 @@ const UserInfo = () => {
   const [userInfo, setUserInfo] = useState();
   console.log(userInfo);
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${user?.email}`)
+    fetch(`https://anu-booking-server.vercel.app/user/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setUserInfo(data[0]);
@@ -24,7 +24,7 @@ const UserInfo = () => {
     const address = form.address.value;
     const data = { name, email, university, address };
     console.log(data);
-    fetch(`http://localhost:5000/user/${userInfo._id}`, {
+    fetch(`https://anu-booking-server.vercel.app/user/${userInfo._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

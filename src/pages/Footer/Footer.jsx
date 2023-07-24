@@ -25,14 +25,14 @@ const Footer = () => {
           </div>
           <div>
             <span className="footer-title">Newsletter</span>
-            <div className="form-control w-80">
+            <div className="form-control ">
               <label className="label">
                 <span className="label-text">Enter your email address</span>
               </label>
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="username@site.com"
+                  placeholder="enter your email..."
                   className="input input-bordered w-full pr-16"
                 />
                 <button className="btn btn-primary bg-[#ffb606] hover:bg-[#ffb606] text-white outline-[#ffb606] border-[#ffb606] hover:border-[#ffb606] absolute top-0 right-0 rounded-l-none">
