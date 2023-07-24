@@ -11,6 +11,7 @@ import PrivateRoute from "../pages/PrivateRoute/PrivateRoute";
 import CollegeDetails from "../Components/CollegeDetails/CollegeDetails";
 import UserInfo from "../pages/UserInfo/UserInfo";
 import NotFound from "../pages/NotFound/NotFound";
+import ResetPassword from "../pages/ResetPassword/ResetPassword";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "admission",
         element: <Admission></Admission>,
+      },
+      {
+        path: "reset-password",
+        element: <ResetPassword></ResetPassword>,
       },
       {
         path: "admission/:id",

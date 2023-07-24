@@ -109,9 +109,12 @@ const Login = () => {
               <span className="text-red-500 my-2">This field is required</span>
             )}
             <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
+              <Link
+                to="/reset-password"
+                className="label-text-alt link link-hover"
+              >
                 Forgot password?
-              </a>
+              </Link>
             </label>
             <p className="text-red-600">{error}</p>
           </div>
