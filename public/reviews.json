@@ -1,26 +1,17 @@
 [
   {
-    "reviewer_name": "John Smith",
-    "review_date": "2023-05-15",
-    "rating": 4.5,
-    "review_text": "I had a wonderful experience at ABC College. The professors were knowledgeable and supportive, and the campus facilities were excellent. The college provided ample opportunities for extracurricular activities and personal growth. I highly recommend ABC College to others.",
-    "likes": 25,
-    "dislikes": 2
+    "name": "John Smith",
+    "ratting": 4.5,
+    "description": "I had a wonderful experience at ABC College. The professors were knowledgeable and supportive, and the campus facilities were excellent. The college provided ample opportunities for extracurricular activities and personal growth. I highly recommend ABC College to others."
   },
   {
-    "reviewer_name": "Jane Doe",
-    "review_date": "2023-05-10",
-    "rating": 3.0,
-    "review_text": "My time at ABC College was average. While some professors were great, others lacked enthusiasm. The college could improve its infrastructure and offer more resources for research projects. The campus environment was friendly, but I feel there is room for improvement in certain areas.",
-    "likes": 10,
-    "dislikes": 5
+    "name": "Jane Doe",
+    "ratting": 3.0,
+    "description": "My time at ABC College was average. While some professors were great, others lacked enthusiasm. The college could improve its infrastructure and offer more resources for research projects. The campus environment was friendly, but I feel there is room for improvement in certain areas."
   },
   {
-    "reviewer_name": "Michael Johnson",
-    "review_date": "2023-05-05",
+    "name": "Michael Johnson",
     "rating": 5.0,
-    "review_text": "I absolutely loved my experience at ABC College! The faculty was exceptional, and the college provided state-of-the-art facilities. The extracurricular clubs and events enhanced my overall college life. I wouldn't trade my time at ABC College for anything.",
-    "likes": 50,
-    "dislikes": 0
+    "review_text": "I absolutely loved my experience at ABC College! The faculty was exceptional, and the college provided state-of-the-art facilities. The extracurricular clubs and events enhanced my overall college life. I wouldn't trade my time at ABC College for anything."
   }
 ]

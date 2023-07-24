@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const MyCollege = () => {
   const { user } = useContext(AuthContext);
   const [myCollege, setMyCollege] = useState();
-  const [updateCollege, setUpdateCollege] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/apply-college/${user?.email}`)
       .then((res) => res.json())
@@ -17,12 +17,32 @@ const MyCollege = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
-    console.log(form);
+    const ratting = form.ratting.value;
+    const description = form.description.value;
+    const review = { ratting, description, name: user.displayName };
+    console.log(review);
+    fetch("http://localhost:5000/review", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(review),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your Message Successfully send",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          form.reset();
+        }
+      });
   };
-  const updateHandle = (product) => {
-    setUpdateCollege(product);
-    console.log(product);
-  };
+
   return (
     <section className="size">
       <div className="my-[100px]">
@@ -69,8 +89,7 @@ const MyCollege = () => {
 
                     {/* modal */}
                     <label
-                      onClick={() => updateHandle(myCollege)}
-                      htmlFor={`my-modal-${myCollege._id}`}
+                      htmlFor={`my-modal-${singleCollege._id}`}
                       className="btn bg-[#ffb606] hover:bg-[#ffb606] Roboto  text-white"
                     >
                       Review
@@ -79,19 +98,21 @@ const MyCollege = () => {
                     {/* Put this part before </body> tag */}
                     <input
                       type="checkbox"
-                      id={`my-modal-${myCollege._id}`}
+                      id={`my-modal-${singleCollege._id}`}
                       className="modal-toggle"
                     />
                     <div className="modal">
                       <div className="modal-box  relative">
                         <label
-                          htmlFor={`my-modal-${myCollege._id}`}
+                          htmlFor={`my-modal-${singleCollege._id}`}
                           className="btn btn-sm btn-circle absolute right-2 top-2"
                         >
                           ✕
                         </label>
                         <div className="">
-                          <h1>hello{updateCollege?.college}</h1>
+                          <h1 className="text-xl font-semibold">
+                            {singleCollege?.college}
+                          </h1>
                           <form onSubmit={onSubmit} className="">
                             <div className="form-control w-full ">
                               <label className="label">
@@ -103,7 +124,8 @@ const MyCollege = () => {
                                 type="number"
                                 // {...register("title", { required: true })}
                                 placeholder="Enter your ratting..."
-                                name="title"
+                                name="ratting"
+                                step="any"
                                 required
                                 className="input input-bordered w-full"
                               />
