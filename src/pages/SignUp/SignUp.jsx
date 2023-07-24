@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { BsGoogle } from "react-icons/bs";
+import { FaFacebook } from "react-icons/fa";
 
 const SignUp = () => {
   const { logOut, googleSignIn } = useContext(AuthContext);
@@ -209,13 +210,20 @@ const SignUp = () => {
           </small>
         </p>
         <div className="divider">Or, login with</div>
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-2">
           <div
             onClick={handleGoogleSingIn}
-            className="bg-[#F4B400] p-2 flex items-center gap-2 rounded text-white text-center cursor-pointer"
+            className="bg-[#fdd349] p-2 flex items-center gap-2 rounded text-white text-center cursor-pointer"
           >
             <BsGoogle className="text-[#4285F4]"></BsGoogle>
             <p className="text-[#DB4437]">Google</p>
+          </div>
+          <div
+            // onClick={handleGoogleSingIn}
+            className="bg-[#fdd349] p-2 flex items-center gap-2 rounded text-white text-center cursor-pointer"
+          >
+            <FaFacebook className="text-[#4285F4]"></FaFacebook>
+            <p className="text-[#4285F4]">Facebook</p>
           </div>
         </div>
       </div>
