@@ -110,16 +110,7 @@ const Navbar = () => {
             <h1 className="text-2xl font-bold Roboto">anuBooking</h1>
           </Link>
         </div>
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="input input-bordered w-full lg:w-[300px]"
-          />
-          <button className="btn btn-primary bg-[#ffb606] hover:bg-[#ffb606] text-white outline-[#ffb606] border-[#ffb606] hover:border-[#ffb606] absolute top-0 right-0 rounded-l-none">
-            Search
-          </button>
-        </div>
+
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-1 items-center font-bold uppercase">
             {navOptions}

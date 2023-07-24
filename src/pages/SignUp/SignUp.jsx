@@ -32,6 +32,7 @@ const SignUp = () => {
             const saveUser = {
               name: data.name,
               email: data.email,
+              image: data.photo,
               university: "",
               address: "",
             };
@@ -72,8 +73,33 @@ const SignUp = () => {
   const handleGoogleSingIn = () => {
     googleSignIn()
       .then((result) => {
-        console.log(result.user);
-        navigate("/");
+        const name = result.user.displayName;
+        const email = result.user.email;
+        const image = result.user.photoURL;
+
+        const saveUser = { name, email, image, university: "", address: "" };
+        console.log(saveUser);
+        fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(saveUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.insertedId) {
+              reset();
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Login successfully.",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              navigate("/");
+            }
+          });
       })
       .catch((error) => {
         console.log(error);

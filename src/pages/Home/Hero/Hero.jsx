@@ -3,7 +3,7 @@ import "./Hero.css";
 const Hero = () => {
   return (
     <section className="hero-banner flex items-center">
-      <div className="size ">
+      <div className="size text-right">
         <h1 className="text-3xl my-3">
           Online Booking system for <br />{" "}
           <samp className="Roboto text-[40px] font-bold"> Colleges</samp>

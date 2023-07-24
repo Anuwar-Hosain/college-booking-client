@@ -10,6 +10,7 @@ import MyCollege from "../pages/MyCollege/MyCollege";
 import PrivateRoute from "../pages/PrivateRoute/PrivateRoute";
 import CollegeDetails from "../Components/CollegeDetails/CollegeDetails";
 import UserInfo from "../pages/UserInfo/UserInfo";
+import NotFound from "../pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
             <UserInfo></UserInfo>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "*",
+        element: <NotFound></NotFound>,
       },
     ],
   },
